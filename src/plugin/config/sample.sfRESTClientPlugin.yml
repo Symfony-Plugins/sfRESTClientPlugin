@@ -1,0 +1,25 @@
+
+services:
+  
+  service_1:
+  
+    host    : sample.host.com
+    user    : sampleuser1
+    password: secret1
+  
+  
+  service_2:
+  
+    # override default to specify https
+    scheme  : https
+    
+    # specify root for API URIs
+    root_uri: /api/v2
+    
+    host    : other.host.com
+    user    : sampleuser2
+    password: secret2
+    
+    # specify custom request headers
+    headers:
+      Content-Type: application/xml

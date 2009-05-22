@@ -1,0 +1,30 @@
+# sfRESTClient Plugin
+
+
+This plugin provides a high level API specifically useful for communicating with [RESTful services](http://en.wikipedia.org/wiki/Representational_State_Transfer).  It depends upon the `sfWebBrowserPlugin` for its ability to make HTTP requests to remote sites.
+
+
+## Future Plans
+
+
+### Service-specific Browser Configurations
+
+Allow service-specific browser configuration overrides as follows:
+
+    [yaml]
+    browser_conf:
+      headers: {}
+      adapter_class: ''
+      adapter_options: {}
+
+
+### Remote Entity Schema / ORM?
+
+Implement a schema-like definition of remote objects. Perhaps implement an ORM-like API for remote entities. Potentially even implement REST as a database adaptor for Propel?
+
+    [yaml]
+    # potential "schema sketch"
+    entities:
+      stock:
+        param:
+          id: { type: int }

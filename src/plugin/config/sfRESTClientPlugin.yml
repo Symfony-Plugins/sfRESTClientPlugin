@@ -1,0 +1,27 @@
+# global default configuration directives
+
+services:
+  
+  default:
+    schema  : http
+    root_uri: /
+    enabled : true
+    
+    browser_conf:
+      adapter_class: sfCurlAdapter
+
+
+browser_adapters:
+  
+  curl:
+    
+    class_name: sfCurlAdapter
+    
+    # CURL options as documented at http://www.php.net/manual/en/function.curl-setopt.php
+    curl_opts:
+      CURLOPT_SSL_VERIFYPEER: false
+      CURLOPT_RETURNTRANSFER: 1
+      CURLOPT_AUTOREFERER   : true
+      CURLOPT_FOLLOWLOCATION: true
+      CURLOPT_FORBID_REUSE  : 1
+      CURLOPT_FRESH_CONNECT : 1
